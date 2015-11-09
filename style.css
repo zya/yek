@@ -26,7 +26,9 @@ html, body {
   padding-bottom: 2%;
   text-align: center;
   color: white;
+  font-size: 16px;
   font-family: 'mitra';
+  line-height: 40px;
 }
 @font-face {
   font-family: 'Farsi1';
