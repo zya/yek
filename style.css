@@ -1,0 +1,71 @@
+#svg {
+  visibility: hidden;
+  display: none;
+}
+html, body {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#interactive {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
+#section {
+  height: 100%;
+  width: 100%;
+  background: black;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+#description {
+  text-align: center;
+  color: white;
+  font-family: 'Farsi1';
+}
+@font-face {
+  font-family: 'Farsi1';
+  src: url('https://dl.dropboxusercontent.com/u/141488253/IRANSans-Medium-web.eot');  /* here you go, IE */
+}
+@font-face {
+  font-family: 'Farsi1';
+  src: url('https://dl.dropboxusercontent.com/u/141488253/IRANSans-Medium-web.woff');  /* everyone else take this */
+}
+@font-face {
+  font-family: 'Farsi1';
+  src: url('https://dl.dropboxusercontent.com/u/141488253/IRANSans-Medium-web.ttf');  /* everyone else take this */
+}
+.panel-default > .panel-heading-custom {
+  background: black;
+  color: white;
+}
+label, h1, input {
+  color: black;
+  font-family: 'Farsi1';
+  font-style: 'normal';
+  font-size: 12px;
+}
+.btn {
+  background: black;
+  color: white;
+  font-family: 'Farsi1';
+  font-style: 'normal';
+  font-size: 12px;
+}
+.form-control {
+  font-size: 10px;
+}
+.btn:hover {
+  background: grey;
+  color: black;
+}
+#payment {
+  position: relative;
+  left: 30%;
+  width: 40%;
+  padding: 0;
+  margin: 0;
+}
