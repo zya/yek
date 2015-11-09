@@ -22,9 +22,11 @@ html, body {
   padding: 0;
 }
 #description {
+  padding-top: 2%;
+  padding-bottom: 2%;
   text-align: center;
   color: white;
-  font-family: 'Farsi1';
+  font-family: 'mitra';
 }
 @font-face {
   font-family: 'Farsi1';
@@ -37,6 +39,11 @@ html, body {
 @font-face {
   font-family: 'Farsi1';
   src: url('https://dl.dropboxusercontent.com/u/141488253/IRANSans-Medium-web.ttf');  /* everyone else take this */
+}
+
+@font-face {
+    font-family: "mitra";
+    src: url("https://dl.dropboxusercontent.com/u/141488253/BMitra.eot") format("eot"), url("https://dl.dropboxusercontent.com/u/141488253/BMitra.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/141488253/BMitra.ttf") format("truetype");
 }
 .panel-default > .panel-heading-custom {
   background: black;
@@ -68,4 +75,7 @@ label, h1, input {
   width: 40%;
   padding: 0;
   margin: 0;
+}
+#title{
+  font-size: 30px;
 }
