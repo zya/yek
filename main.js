@@ -1,6 +1,17 @@
+function scrollTo(element, to, duration) {
+  if (duration <= 0) return;
+  var difference = to - element.scrollTop;
+  var perTick = difference / duration * 10;
+
+  setTimeout(function () {
+    element.scrollTop = element.scrollTop + perTick;
+    if (element.scrollTop === to) return;
+    scrollTo(element, to, duration - 10);
+  }, 10);
+}
 window.onload = function () {
   var w = window.innerWidth;
-  var h = window.innerHeight;
+  var h = window.innerHeight * 0.9;
   var svg = document.getElementById('svg');
   var pathString = svg.children[0].children[0].getAttribute('d');
   var things = [];
@@ -9,6 +20,9 @@ window.onload = function () {
   };
 
   var interactiveElement = document.getElementById('interactive');
+  var section1Element = document.getElementById('section1');
+  var downElement = document.getElementById('down');
+  var paymentElement = document.getElementById('section');
   var paper = Raphael(interactiveElement, w, h);
   paper.canvas.id = 'logo';
   var a = paper.path(pathString);
@@ -46,6 +60,8 @@ window.onload = function () {
 
   things[1].hover(function () {
     interactiveElement.style['background-color'] = 'black';
+    section1Element.style['background-color'] = 'black';
+    downElement.style['color'] = 'white';
     things[1].attr('fill', 'white');
     things[1].attr('stroke', 'black');
     things.forEach(function (thing, index) {
@@ -56,9 +72,17 @@ window.onload = function () {
   }, function () {
     things.forEach(function (thing, index) {
       interactiveElement.style['background-color'] = 'red';
+      section1Element.style['background-color'] = 'red';
+      downElement.style['color'] = 'black';
       if (index < 1) return;
       thing.attr('fill', 'black');
       thing.attr('stroke', 'red');
     });
+  });
+
+  downElement.addEventListener('click', function () {
+    $("html, body").animate({
+      scrollTop: h * 1.2
+    }, 800);
   });
 };
