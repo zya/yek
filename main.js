@@ -46,8 +46,10 @@ window.onload = function () {
 
   things[1].hover(function () {
     interactiveElement.style['background-color'] = 'black';
+    things[1].attr('fill', 'white');
+    things[1].attr('stroke', 'black');
     things.forEach(function (thing, index) {
-      if (index < 1) return;
+      if (index <= 1) return;
       thing.attr('fill', 'red');
       thing.attr('stroke', 'black');
     });
