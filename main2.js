@@ -45,32 +45,30 @@ window.onload = function() {
       one.translate(1, 0);
       one.hover(hoverOn, hoverOff);
     }
-
   }
-
   things[1].hover(function() {
+    interactiveElement.style.cursor = 'crosshair';
     interactiveElement.style['background-color'] = 'black';
     section1Element.style['background-color'] = 'black';
     things[1].attr('fill', 'white');
     things[1].attr('stroke', 'black');
     things.forEach(function(thing, index) {
       if (index <= 1) return;
-      thing.attr('fill', 'red');
-      thing.attr('stroke', 'black');
+      setTimeout(function() {
+        thing.attr('fill', 'red');
+        thing.attr('stroke', 'black');
+      }, 2);
     });
   }, function() {
+    interactiveElement.style.cursor = 'auto';
     things.forEach(function(thing, index) {
       interactiveElement.style['background-color'] = 'red';
       section1Element.style['background-color'] = 'red';
       if (index < 1) return;
-      thing.attr('fill', 'black');
-      thing.attr('stroke', 'red');
+      setTimeout(function() {
+        thing.attr('fill', 'black');
+        thing.attr('stroke', 'red');
+      }, 2);
     });
-  });
-
-  downElement.addEventListener('click', function() {
-    $("html, body").animate({
-      scrollTop: h * 1.2
-    }, 800);
   });
 };

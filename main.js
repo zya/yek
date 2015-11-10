@@ -3,19 +3,19 @@ function scrollTo(element, to, duration) {
   var difference = to - element.scrollTop;
   var perTick = difference / duration * 10;
 
-  setTimeout(function () {
+  setTimeout(function() {
     element.scrollTop = element.scrollTop + perTick;
     if (element.scrollTop === to) return;
     scrollTo(element, to, duration - 10);
   }, 10);
 }
-window.onload = function () {
+window.onload = function() {
   var w = window.innerWidth;
   var h = window.innerHeight * 0.9;
   var svg = document.getElementById('svg');
   var pathString = svg.children[0].children[0].getAttribute('d');
   var things = [];
-  var map = function (value, istart, istop, ostart, ostop) {
+  var map = function(value, istart, istop, ostart, ostop) {
     return ostart + (ostop - ostart) * ((value - istart) / (istop - istart));
   };
 
@@ -34,11 +34,11 @@ window.onload = function () {
 
   things.push(a);
 
-  var hoverOn = function () {
+  var hoverOn = function() {
     this.attr('fill', 'red');
   };
 
-  var hoverOff = function () {
+  var hoverOff = function() {
     this.attr('fill', 'black');
   };
 
@@ -58,20 +58,22 @@ window.onload = function () {
     things.push(one);
   }
 
-  things[1].hover(function () {
+  things[1].hover(function() {
     interactiveElement.style['background-color'] = 'black';
     section1Element.style['background-color'] = 'black';
+    interactiveElement.style.cursor = 'crosshair';
     downElement.style['color'] = 'white';
     things[1].attr('fill', 'white');
     things[1].attr('stroke', 'black');
-    things.forEach(function (thing, index) {
+    things.forEach(function(thing, index) {
       if (index <= 1) return;
       thing.attr('fill', 'red');
       thing.attr('stroke', 'black');
     });
-  }, function () {
-    things.forEach(function (thing, index) {
+  }, function() {
+    things.forEach(function(thing, index) {
       interactiveElement.style['background-color'] = 'red';
+      interactiveElement.style.cursor = 'auto';
       section1Element.style['background-color'] = 'red';
       downElement.style['color'] = 'black';
       if (index < 1) return;
@@ -80,7 +82,7 @@ window.onload = function () {
     });
   });
 
-  downElement.addEventListener('click', function () {
+  downElement.addEventListener('click', function() {
     $("html, body").animate({
       scrollTop: h * 1.2
     }, 800);
