@@ -28,7 +28,7 @@ html, body {
   padding-bottom: 2%;
   text-align: center;
   color: white;
-  font-size: 2.3vmin;
+  font-size: 2.5vmin;
   font-family: 'mitra';
   line-height: 40px;
   width: 60%;
@@ -105,21 +105,30 @@ label, h1, input {
   color: white;
 }
 .small {
-  font-size: 1.9vmin;
-  line-height: 25px;
+  font-size: 2.2vmin;
+  line-height: 30x;
 }
-@media (max-width:600px) {
+@media (max-device-width:800px) {
+  #title {
+    font-size: 5vmin;
+    line-height: 6vmin;
+  }
   .description {
     font-size: 3.5vmin;
+    line-height: 6vmin;
     width: 90%;
     left: 5%;
   }
   .small {
-    font-size: 2.5vmin;
-    line-height: 20px;
+    font-size: 3vmin;
+    line-height: 4vmin;
   }
   #payment {
     width: 70%;
     left: 15%;
+  }
+  #down {
+    font-size: 5vmin;
+    padding-top: 2.5vmin;
   }
 }

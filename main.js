@@ -48,7 +48,7 @@ window.onload = function() {
     one.attr('stroke', 'red');
     one.translate(w / 2 - 150, h / 2 - 150);
     var scaledI = map(i, 1, 200, 0.2, 10);
-    one.scale(Math.exp(scaledI) * 0.33, Math.exp(scaledI) * 0.33);
+    one.scale(Math.exp(scaledI) * 0.40, Math.exp(scaledI) * 0.40);
     one.insertBefore(things[i - 1]);
     if (i > 2) {
       one.translate(1, 0);
