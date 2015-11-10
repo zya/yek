@@ -126,9 +126,14 @@ label, h1, input {
   #payment {
     width: 70%;
     left: 15%;
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
   }
   #down {
     font-size: 5vmin;
     padding-top: 2.5vmin;
+  }
+  label, h1, input, .btn {
+    font-size: 18px;
   }
 }
