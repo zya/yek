@@ -47,10 +47,9 @@ html, body {
   font-family: 'Farsi1';
   src: url('https://dl.dropboxusercontent.com/u/141488253/IRANSans-Medium-web.ttf');  /* everyone else take this */
 }
-
 @font-face {
-    font-family: "mitra";
-    src: url("https://dl.dropboxusercontent.com/u/141488253/BMitra.eot") format("eot"), url("https://dl.dropboxusercontent.com/u/141488253/BMitra.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/141488253/BMitra.ttf") format("truetype");
+  font-family: "mitra";
+  src: url("https://dl.dropboxusercontent.com/u/141488253/BMitra.eot") format("eot"), url("https://dl.dropboxusercontent.com/u/141488253/BMitra.woff") format("woff"), url("https://dl.dropboxusercontent.com/u/141488253/BMitra.ttf") format("truetype");
 }
 .panel-default > .panel-heading-custom {
   background: black;
@@ -83,29 +82,44 @@ label, h1, input {
   padding: 0;
   margin: 0;
 }
-#title{
+#title {
   font-size: 40px;
 }
 #section1 {
   margin: 0;
-  padding:0;
+  padding: 0;
   margin-top: -2px;
   text-align: center;
   height: 10vh;
   background-color: red;
 }
-#down{
+#down {
   font-size: 4vmin;
   padding-top: 2vmin;
   color: black;
   cursor: pointer;
   z-index: 2000;
 }
-#down:hover{
+#down:hover {
   cursor: pointer;
   color: white;
 }
 .small {
   font-size: 1.9vmin;
   line-height: 25px;
+}
+@media (max-width:600px) {
+  .description {
+    font-size: 3.5vmin;
+    width: 90%;
+    left: 5%;
+  }
+  .small {
+    font-size: 2.5vmin;
+    line-height: 20px;
+  }
+  #payment {
+    width: 70%;
+    left: 15%;
+  }
 }
